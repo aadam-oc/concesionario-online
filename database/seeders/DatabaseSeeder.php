@@ -13,7 +13,9 @@ class DatabaseSeeder extends Seeder
     public function run()
 {
     // Llama al CarSeeder para insertar los coches
-    $this->call(CarSeeder::class);
+    $this->call(CochesSeeder::class);
+    // Llama al UserSeeder para insertar los usuarios
+    $this->call(UsuariosSeeder::class);
 }
 
 }
