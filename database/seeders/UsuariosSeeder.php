@@ -20,6 +20,13 @@ class UsuariosSeeder extends Seeder
                 'password' => Hash::make('Adam'),
                 'created_at' => now(),
                 'updated_at' => now(),
+            ],
+            [
+                'nombre' => 'adamortizcasas',
+                'email' => 'adamortizcasas@gmail.com',
+                'password' => Hash::make('adamortizcasas'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
     }

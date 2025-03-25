@@ -9,6 +9,26 @@
 </head>
 
 <body class="bg-gray-100 font-sans antialiased">
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            
+            <!-- Links de navegación -->
+            <div>
+                @auth
+                    <a href="{{ route('logout') }}" class="mx-4 text-white hover:text-gray-200" 
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Cerrar sesión
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                        @csrf
+                    </form>
+                @else
+                    <a href="{{ route('login') }}" class="mx-4 text-white hover:text-gray-200">Iniciar sesión</a>
+                    <a href="{{ route('register') }}" class="mx-4 text-white hover:text-gray-200">Registrarse</a>
+                @endauth
+            </div>
+        </div>
+    </header>
     <div class="container mx-auto p-6">
         <h1 class="text-3xl font-semibold text-center mb-6">Listado de Coches</h1>
 
